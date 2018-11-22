@@ -1,0 +1,51 @@
+package week10;
+import java.util.*;
+public class BookTest {
+	public static void main(String[] args)
+	{
+		ArrayList<Book> list = new ArrayList<Book>();
+		Scanner in = new Scanner(System.in);
+		final int insert = 1;
+		final int status = 2;
+		final int search = 3;
+		final int printlist = 4;
+		final int delete = 5;
+		final int exit = 6;
+		final int index;
+		
+		while(true)
+		{
+			System.out.println("------------- 메뉴를선택 -------------");
+			System.out.println("1.저장,2.대출,3.검색,4.리스트출력,5.삭제,6.종료");
+			System.out.print("입력 -->");
+			int menu = in.nextInt();
+			switch(menu)
+			{
+			case insert:
+				list.add(new Book(in.next(),in.next(),in.next(),in.nextBoolean()));
+				break;
+			case status:
+				System.out.println("대출하고자 하는 책을  입력하세요 -> ");
+				System.out.print(in.next());
+				list.equals(status);
+				break;
+			case search:
+				System.out.println(" 찾고자 하는것 : " +list.indexOf(in.next()));
+				break;
+			case printlist:
+				for(int i = 0; i<list.size(); i++)
+				{
+					System.out.println(list.get(i));
+				}
+				break;
+			case delete:
+				list.remove(in.nextInt());
+				break;
+			case exit:
+				System.out.println("프로그램을 종료합니다 ."); return;
+			}
+				
+				
+			}
+		}
+}
