@@ -1,2 +1,1 @@
-# javaprogramming
-javaprogramming2 lab
+자바 프로그래밍 2 강의 과제 올리는곳
