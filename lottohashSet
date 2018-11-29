@@ -1,0 +1,31 @@
+package week10;
+import java.util.HashSet;
+import java.util.Iterator;
+public class lottohashset {
+	public static void main(String[] args)
+	{
+		HashSet<Integer> h = new HashSet<>();
+		
+		for(int i =0; i<6;) // 데이터 입력
+		{
+			int num = (int)(Math.random()*45) + 1;
+			System.out.print(num + " ");
+			if(!h.add(num))
+			{
+				System.out.println("중복된 숫자 ==>" + num);
+				break;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		System.out.println();
+		Iterator <Integer> i = h.iterator(); // Iterator 선언
+		while(i.hasNext())
+		{
+			System.out.print(i.next() + " ");
+		}
+	}
+
+}
